@@ -66,7 +66,7 @@ A comprehensive overview of leading proprietary Digital Audio Workstations and s
 
 ## 💻 Open-Source GitHub Projects
 
-Curated open-source Digital Audio Workstations, waveform editors, and audio DSP engines, **sorted strictly by GitHub Star Count (descending)**:
+Curated open-source Digital Audio Workstations, waveform editors, and audio DSP engines, **sorted strictly by GitHub Stars_Count (descending)**:
 
 - **[LosslessCut](https://github.com/mifi/lossless-cut)** [![Stars](https://img.shields.io/github/stars/mifi/lossless-cut?style=social&color=white)](https://github.com/mifi/lossless-cut/stargazers)  
   **The ultimate swiss army knife for lossless audio and video editing** (GPL-2.0). Perform near-instantaneous trimming, cutting, and splitting of audio/video streams without re-encoding or generational quality loss. Features timeline waveform inspection, chapter editing, track extraction, and high-performance ffmpeg bindings.
@@ -167,7 +167,7 @@ Contributions are warmly encouraged! To propose a new software package or update
 2. 🌿 **Create a descriptive feature branch** (`git checkout -b feature/add-new-audio-tool`).
 3. 📝 **Add or edit entries in `README.md`** following the established format:
    - For SaaS: include specific starting pricing tiers, explicit free tier / trial terms, and parent company scale.
-   - For Open-Source: include name, official repository link, GitHub star badge, license, and technical summary.
+   - For Open-Source: include name, official repository link, GitHub Stars_Badge, license, and technical summary.
 4. 🚀 **Submit a Pull Request** with a concise description of your additions.
 
 ---
