@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0b10" />
+      <stop offset="50%" stop-color="#121324" />
+      <stop offset="100%" stop-color="#180e29" />
+    </linearGradient>
+
+    <!-- Wave Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#a18cd1" />
+    </linearGradient>
+
+    <linearGradient id="magentaPink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f857a6" />
+      <stop offset="100%" stop-color="#ff5858" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulseWave {
+      0% { transform: scaleY(0.4); opacity: 0.5; }
+      50% { transform: scaleY(1.0); opacity: 0.95; }
+      100% { transform: scaleY(0.4); opacity: 0.5; }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-25px) translateX(15px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+    }
+    @keyframes shimmerBar {
+      0%, 100% { opacity: 0.4; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1.15); }
+    }
+    .bar {
+      transform-origin: bottom;
+      animation: pulseWave 2.8s ease-in-out infinite;
+    }
+    .particle {
+      animation: floatParticle 6s ease-in-out infinite;
+    }
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+    }
+    .sub-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .badge-pill {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+    }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGradient)" stroke="#262740" stroke-width="1.5" />
+
+  <!-- Animated Background Sound Wave Spectrum Bars (positioned safely in the background) -->
+  <g opacity="0.35" transform="translate(0, 0)">
+    <!-- Spectrum bars left to right -->
+    <rect class="bar" x="60" y="240" width="8" height="70" rx="4" fill="#00f2fe" style="animation-delay: 0.1s;" />
+    <rect class="bar" x="80" y="220" width="8" height="90" rx="4" fill="#00d2fe" style="animation-delay: 0.4s;" />
+    <rect class="bar" x="100" y="200" width="8" height="110" rx="4" fill="#4facfe" style="animation-delay: 0.7s;" />
+    <rect class="bar" x="120" y="230" width="8" height="80" rx="4" fill="#6b8cfe" style="animation-delay: 0.3s;" />
+    <rect class="bar" x="140" y="210" width="8" height="100" rx="4" fill="#7f75fe" style="animation-delay: 0.9s;" />
+    <rect class="bar" x="160" y="190" width="8" height="120" rx="4" fill="#a18cd1" style="animation-delay: 0.2s;" />
+    <rect class="bar" x="180" y="220" width="8" height="90" rx="4" fill="#ba68c8" style="animation-delay: 0.5s;" />
+
+    <rect class="bar" x="1000" y="220" width="8" height="90" rx="4" fill="#f857a6" style="animation-delay: 0.3s;" />
+    <rect class="bar" x="1020" y="190" width="8" height="120" rx="4" fill="#ff5858" style="animation-delay: 0.8s;" />
+    <rect class="bar" x="1040" y="210" width="8" height="100" rx="4" fill="#ff7675" style="animation-delay: 0.2s;" />
+    <rect class="bar" x="1060" y="230" width="8" height="80" rx="4" fill="#fd79a8" style="animation-delay: 0.6s;" />
+    <rect class="bar" x="1080" y="200" width="8" height="110" rx="4" fill="#e84393" style="animation-delay: 0.4s;" />
+    <rect class="bar" x="1100" y="220" width="8" height="90" rx="4" fill="#d63031" style="animation-delay: 0.7s;" />
+    <rect class="bar" x="1120" y="250" width="8" height="60" rx="4" fill="#ff7675" style="animation-delay: 0.1s;" />
+  </g>
+
+  <!-- Ambient Particles -->
+  <circle class="particle" cx="150" cy="80" r="3" fill="#00f2fe" style="animation-delay: 0s;" />
+  <circle class="particle" cx="320" cy="50" r="2.5" fill="#a18cd1" style="animation-delay: 1.5s;" />
+  <circle class="particle" cx="880" cy="70" r="3" fill="#f857a6" style="animation-delay: 2.5s;" />
+  <circle class="particle" cx="1060" cy="110" r="2" fill="#4facfe" style="animation-delay: 0.8s;" />
+
+  <!-- Animated Bottom Soundwave Oscilloscope Line -->
+  <path d="M0,320 Q75,310 150,320 T300,320 T450,305 T600,330 T750,310 T900,325 T1050,315 T1200,320" fill="none" stroke="url(#cyanPurple)" stroke-width="2.5" opacity="0.45" />
+  <path d="M0,325 Q85,335 170,325 T340,315 T510,335 T680,315 T850,330 T1020,320 T1200,325" fill="none" stroke="url(#magentaPink)" stroke-width="2" opacity="0.35" />
+
+  <!-- Foreground Content (Guaranteed crisp and unobstructed) -->
+  <g transform="translate(600, 75)" text-anchor="middle">
+    <!-- Category Pill Tag -->
+    <rect x="-110" y="0" width="220" height="28" rx="14" fill="#1e223d" stroke="#3b4273" stroke-width="1.2" />
+    <text class="badge-pill" x="0" y="19" fill="#00f2fe" text-anchor="middle">🎛️ AUDIO PRODUCTION ECOSYSTEM</text>
+
+    <!-- Main Title -->
+    <text class="title-text" x="0" y="85" font-size="52" fill="#ffffff">Awesome Audio Editing</text>
+    <text class="title-text" x="0" y="85" font-size="52" fill="url(#cyanPurple)" opacity="0.3" filter="url(#glow)">Awesome Audio Editing</text>
+
+    <!-- Subtitle -->
+    <text class="sub-text" x="0" y="126" font-size="20" fill="#cbd5e1">The Definitive Guide to Digital Audio Workstations, Waveform Editors &amp; Audio Restoration</text>
+
+    <!-- Dynamic Metric Pills in Foreground -->
+    <g transform="translate(0, 165)">
+      <!-- Pill 1 -->
+      <g transform="translate(-250, 0)">
+        <rect x="-95" y="0" width="190" height="34" rx="17" fill="#141829" stroke="#2d3356" stroke-width="1.2" />
+        <text class="badge-pill" x="0" y="22" fill="#93c5fd" text-anchor="middle">⚡ Top SaaS Platforms</text>
+      </g>
+
+      <!-- Pill 2 -->
+      <g transform="translate(0, 0)">
+        <rect x="-95" y="0" width="190" height="34" rx="17" fill="#141829" stroke="#2d3356" stroke-width="1.2" />
+        <text class="badge-pill" x="0" y="22" fill="#c084fc" text-anchor="middle">⭐ 25+ Open Source DAWs</text>
+      </g>
+
+      <!-- Pill 3 -->
+      <g transform="translate(250, 0)">
+        <rect x="-95" y="0" width="190" height="34" rx="17" fill="#141829" stroke="#2d3356" stroke-width="1.2" />
+        <text class="badge-pill" x="0" y="22" fill="#f472b6" text-anchor="middle">🚀 Community Maintained</text>
+      </g>
+    </g>
+  </g>
+</svg>
